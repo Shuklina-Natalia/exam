@@ -1,66 +1,75 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .section-one header{
     background-color: rgba(37, 36, 36, 0.459);
-    height: 8vh;
-
-}
-
-.section-one_navbar{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-
-.navbar_head{
+    height: 9vh;
+    position: fixed;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .section-one_p{
-    color: white;
-    margin-top: 15px;
-    margin-left: -730px;
+   font-size: 1.3rem;
 }
 
 .section-one_p1{
-    display: block;
-    color: white;
-    margin-top: 15px;
-    margin-left: 150px;
+     font-size: 1.3rem;
+     margin-right: 20px;
 }
 
 .section-one .btn {
-    padding: 10px 10px 10px 10px;
+    padding: 14px 18px;
     background-color: rgb(0, 217, 255);
     color: #fff;
     border: none;
-    position: absolute;
-    right: 10px;
-    top: 5px;
+    font-size: 1.3rem;
 }
 
 .section-one{
-    position: relative;
     background-image: url(https://static.tildacdn.com/tild6463-3636-4437-a166-383461623763/__1600x1200.jpg);
+    background-size: cover;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.logo {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+.logo2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-one_title {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 250px;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .section-one h2{
     text-align: center;
-    padding: 270px 500px 0px 530px;
-    width: 300px;
-    margin-bottom: 70px;
-    color: rgb(255, 255, 255);
+    font-size: 3rem;
 }
 
-.section-one h3{
-    padding: 60px 100px 0px 590px;
-    color: rgb(0, 0, 0);
+.otziv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
 }
     
 .card__link-item {
@@ -72,66 +81,121 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-left: 655px;
-
 }
 
+@media screen and (max-width: 680px) {
+    .section-one .btn {
+        padding: 10px 12px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-one_p{
+       font-size: 1.1rem;
+    }
+    .section-one_p1{
+         font-size: 1.1rem;
+         margin-right: 10px;
+    }
+    .section-one .btn {
+        padding: 8px 8px;
+        font-size: 1.1rem;
+    } 
+    .section-one h2{
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-one .btn {
+        padding: 8px 8px;
+        font-size: 1rem;
+    } 
+}
+
+@media screen and (max-width: 460px) {
+      
+    .section-one_p1{
+      display: none;
+    }
+}
 
 /* section-two */   
 
 
 .section-two{
-    height: 101vh;
+    height: 65vh;
     background-color: #FFF8DC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
 }
 
 .head{
-    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 40px;
-    padding-top: 40px;
 }
 
 .section-two_list{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: -65px;
 }
 
 .section-two_item_cards{
-    margin-top: 190px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .card__title{
-    text-align: center;
     font-size: 20px;
 }
 
 .card__discription{
-    text-align: center;
     color: red;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .card__img{
     border-radius: 50%;
+    height: 200px;
+    width: 260px;
+    margin-bottom: 10px;
 }
 
+@media screen and (max-width: 800px){
+    .section-two_list{
+        grid-template-columns: 1fr;
+        margin-top: -25px;
+    }
+    .section-two{
+        height: 113vh;
+    }
+    .card__img{
+        height: 200px;
+        width: 260px;
+    }
+    .section-two_item_cards{
+       margin: 7px;
+    }    
+}
 
 /* section-three */
 
 
 .section-three{
-    height: 101vh;
+    min-height: 101vh;
     background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614386942_56-p-pitstsa-na-svetlom-fone-80.jpg);
+    color: black;
+    background-size: cover;
 }
 
 .section-three_head{
-    color: black;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     padding-top: 30px;
 }
 
@@ -141,19 +205,62 @@
 }
 
 .section-three_item_cards{
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 100px;
 }
 
-.head_p{
-    color: black;
+.under_p{
+    text-align: center;
 }
 
-.under_p{
-    color: black;
+.img {
+    width: 75px;
+    height: 75px;
+    margin: 10px 0px;
+}
+
+@media screen and (max-width: 860px) {
+    .section-three_item_cards{
+        margin: 85px;
+    }
+}
+@media screen and (max-width: 800px){
+    .section-three_item_cards{
+        margin: 80px;
+    }
+}
+@media screen and (max-width: 760px){
+    .section-three_item_cards{
+        margin: 70px;
+    }
+}
+@media screen and (max-width: 700px){
+    .section-three_item_cards{
+        margin: 60px;
+    }
+}
+@media screen and (max-width: 660px){
+    .section-three_item_cards{
+        margin: 50px;
+    }
+}
+@media screen and (max-width: 615px){
+    .section-three_list{
+        grid-template-columns: 1fr 1fr;
+    }
+    .section-three_head{
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 460px){
+    .section-three_item_cards{
+        margin: 35px;
+    }
+    .section-three_head{
+        font-size: 25px;
+    }
 }
 
 
@@ -163,35 +270,46 @@
 .section-for{
     height: 100vh;
     background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614404438_31-p-pitstsa-na-temnom-fone-44.jpg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .section-for_p{
     text-align: center;
     font-size: 30px;
     padding-top: 40px;
-    color: white;
 }
 
-.section-for_list{
-    display: grid;
-    grid-template-columns: 1fr;    
-}
-
-.feedback{
-    margin-top: 50px;
+.feedback1{
+    margin: 25px 0px;
+    background-color: rgba(128, 128, 128, 0.548);
+    width: 570px;
+    height: 230px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 60px;
-    margin-left: 50px;
+    flex-direction: row;
+}
 
+
+.feedback2{
+    margin: 25px 0px;
+    background-color: rgba(128, 128, 128, 0.548);
+    width: 570px;
+    height: 230px;
+    display: flex;
+    flex-direction: row;
 }
 
 .text{
-    color: white;
     font-size: 17px;
-    width: 500px;
-    background-color: rgba(128, 128, 128, 0.548);
+}
+
+.div-text {
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .p span{
@@ -199,43 +317,93 @@
 }
 
 .section-for_img{
-    float: left;
-    margin-right: 10px;
+    width: 200px;
+    height: 230px;
 }
-/*section-five*/
 
+@media screen and (max-width:610px) {
+    .feedback1{
+        width: 500px;
+        height: 220px;
+    }
+    .feedback2{
+        width: 500px;
+        height: 220px;
+    }
+    .text{
+        font-size: 15px;
+    }
+    .section-for_img{
+        width: 190px;
+        height: 220px;
+    }
+}
+@media screen and (max-width:540px) {
+    .feedback1{
+        width: 460px;
+        height: 200px;
+    }
+    .feedback2{
+        width: 460px;
+        height: 200px;
+    }
+    .text{
+        font-size: 14px;
+    }
+    .section-for_img{
+        width: 170px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:510px) {
+    .feedback1{
+        width: 430px;
+        height: 190px;
+    }
+    .feedback2{
+        width: 430px;
+        height: 190px;
+    }
+    .text{
+        font-size: 13px;
+    }
+    .section-for_img{
+        width: 160px;
+        height: 190px;
+    }
+    .div-text {
+        padding: 8px;
+    }
+}
+
+/*section-five*/
 
 .section-five{
     background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614404438_31-p-pitstsa-na-temnom-fone-44.jpg);
     height: 8vh;
-}
-
-.section-five_navbar{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.section-five_navbar_head{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    background-size: cover;
+    color: white;
+}
+.section-five_navbar_head {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
 }
 
-.section-five_p{
-    color: white;
-    margin-top: 15px;
-    margin-left: -730px;
+@media screen and (max-width:580px){
+    .section-five_p{
+        font-size: 0.9rem;
+    }
 }
-
-.section-five_p1{
-    display: block;
-    color: white;
-    margin-right: 110px;
-}
-
-.section-five_p2{
-    display: block;
-    color: white;
-    margin-right: -35px;
-    margin-top: 2px;
+@media screen and (max-width:500px){
+    .section-five_p{
+        font-size: 0.8rem;
+    }
+    .section-five_img {
+        height: 40px;
+        width: 40px;
+    }
 }
